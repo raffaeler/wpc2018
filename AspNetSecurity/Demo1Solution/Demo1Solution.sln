@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28306.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreAuthDemo", "AspNetCoreAuthDemo\AspNetCoreAuthDemo.csproj", "{A6FF96A9-A485-41C8-ADA7-792D22366968}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28D74AED-CB47-4026-9328-4CEDC09E47A5}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		steps.txt = steps.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiCoreAuthDemo", "WebApiCoreAuthDemo\WebApiCoreAuthDemo.csproj", "{08451F34-4CB7-4134-9122-F0EC15587C8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppAngularDemo", "WebAppAngularDemo\WebAppAngularDemo.csproj", "{29E4BFDC-7C57-40FC-B547-8069DE421B26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RafIdentityProviderLibrary", "RafIdentityProviderLibrary\RafIdentityProviderLibrary.csproj", "{2FD2ED84-0246-4B13-A27A-0FE9A71793B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6FF96A9-A485-41C8-ADA7-792D22366968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FF96A9-A485-41C8-ADA7-792D22366968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FF96A9-A485-41C8-ADA7-792D22366968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FF96A9-A485-41C8-ADA7-792D22366968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08451F34-4CB7-4134-9122-F0EC15587C8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08451F34-4CB7-4134-9122-F0EC15587C8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08451F34-4CB7-4134-9122-F0EC15587C8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08451F34-4CB7-4134-9122-F0EC15587C8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E4BFDC-7C57-40FC-B547-8069DE421B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E4BFDC-7C57-40FC-B547-8069DE421B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E4BFDC-7C57-40FC-B547-8069DE421B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E4BFDC-7C57-40FC-B547-8069DE421B26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD2ED84-0246-4B13-A27A-0FE9A71793B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD2ED84-0246-4B13-A27A-0FE9A71793B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD2ED84-0246-4B13-A27A-0FE9A71793B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD2ED84-0246-4B13-A27A-0FE9A71793B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2489CBF-6B87-41AD-B5D8-DF9AB034221A}
+	EndGlobalSection
+EndGlobal

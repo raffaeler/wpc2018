@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+
+@using Microsoft.AspNetCore.Authorization
+@using ModelLibrary
+@using AuthorizationLibrary
+@inject IAuthorizationService _auth
+
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <p></p>
+</div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/images/logo-header.png" alt="ASP.NET" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <p></p>
+    @{
+        AuthorizationResult result;
+        result = await _auth.AuthorizeAsync(User, new Article(),
+            ArticlePolicies.ListArticles);
+        if (result.Succeeded)
+        {
+            <p>User can create articles</p>
+        }
+        else
+        {
+            <p>User cannot create articles</p>
+        }
+    }
+    <p></p>
+</div>

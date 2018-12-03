@@ -1,0 +1,46 @@
+1. Add a global.json file at solution level
+
+{
+  "sdk": {
+    "version": "2.1.300"
+  }
+}
+
+
+2. Add the Microsoft.EntityFrameworkCore.Sqlite package
+
+3. modify the appsettings.json
+"ConnectionStrings": {
+  "Sqlite":  "Data Source=sqlite.db"
+}
+
+4. In Startup.cs, inside AddDbContext:
+options.UseSqlite(Configuration.GetConnectionString("Sqlite"))
+
+5. Run migrations
+Add-Migration InitialCreate
+Update-Database
+
+== User secrets tool == 
+https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.1&tabs=windows
+Stored in %APPDATA%\Microsoft\UserSecrets\<user_secrets_id>\secrets.json
+
+6. Modify the AddIdentity as stated here (due to changes in asp.net core 2.1):
+https://github.com/IdentityServer/IdentityServer4/issues/2373#issuecomment-398824428
+
+    ---
+    AddDefaultIdentity calls the .AddDefaultUI
+    https://github.com/aspnet/Identity/blob/master/src/UI/IdentityServiceCollectionUIExtensions.cs#L61
+
+    AddIdentity does not call it!!!
+    https://github.com/aspnet/Identity/blob/master/src/Identity/IdentityServiceCollectionExtensions.cs#L38
+
+    BTW AddIdentityCore does not call it too
+    https://github.com/aspnet/Identity/blob/master/src/Core/IdentityServiceCollectionExtensions.cs
+    ---
+
+
+
+== Microsoft auth ==
+ 1. Add the package: Microsoft.AspNetCore.Authentication.MicrosoftAccount
+ 2. Follow: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/microsoft-logins?view=aspnetcore-2.1&tabs=aspnetcore2x
